@@ -66,34 +66,55 @@ class Animal {
 
 
     //the leading list
-    //An object-oriented book-list!
+/*Add a new method to the Shape class's prototype, calcPerimeter(),
+ which calculates its perimeter (the length of the shape's outer edge) 
+and logs the result to the console.
+Create a new instance of the Shape class called square. Give it a name of square and a sideLength of 5.
+Call your calcPerimeter() method on the instance, to see whether it logs the calculation result to the 
+browser DevTools' console as expected.
+Create a new instance of Shape called triangle, with a name of triangle and a sideLength of 3.
+Call triangle.calcPerimeter() to check that it works OK.*/
 
-class BookList{
-    constructor(numOfBookMarkedAsRed,numOfBookNotMarkedAsRed,nextBook,currentBook,[allBook]){
-    this.numOfBookMarkedAsRed = numOfBookMarkedAsRed;
-    this.numOfBookNotMarkedAsRed= numOfBookNotMarkedAsRed;
-    this.nextBook = nextBook;
-    this.currentBook = currentBook;
-    this.allBook = [allBook];
-}
-addBook(book){
-    this.newBook = newBook;
-}
-finishCurrentBook(){
-    
-}
+class Shape {
+    constructor(name, sides, sideLength){
+    this.name = name;
+    this.sides = sides;
+    this.sideLength = sideLength;
+        }
+        calcPerimeter(){
+            let perm = this.sides*this.sideLength;
+            console.log("the perimeter of our "+ this.name + "is " + perm);
+        }
 
-}
+  };
+  
+  
+  /*We'd like you to create a Square class that inherits from Shape, and adds a calcArea() method that 
+  calculates the square's area.
+   Also set up the constructor so that the name property of Square object instances is automatically set to square,
+    and the sides property is automatically set to 4. When invoking the constructor, 
+    you should therefore just need to provide the sideLength property.
 
-class Book{
-    constructor(title,genre,author, read,readDate){
-        this.title = title;
-        THIS.author = author;
-        this.genre = genre;
-        this.read = read;
-        this.readDate = readDate;
-    }
-}
+  Create an instance of the Square class called square with appropriate property values, 
+  and call its calcPerimeter() and calcArea() methods to show that it works ok.*/
+   class Squares extends Shape{
+       constructor(name, sides, sideLength){
+           super(name, sides, sideLength);
+       }
+       calcArea(){
+           let area = this.sideLength*this.sideLength;
+           console.log('The area of our '+ this.name +' is ' +area);
+
+       }
+   };
+
+   let triange = new Shape('triangle',3,4);
+   let square = new Squares('square',4,3);
+   square.calcArea();
+   square.calcPerimeter();
+   triange.calcPerimeter();
+ 
+  
 
 
 
