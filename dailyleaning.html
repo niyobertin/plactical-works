@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oop</title>
+
+</head>
+<body>
+    <h1>oop leaning on tuesday</h1>
+    <script>
+ class User{
+     constructor(userName,email,company){
+         this.userName = userName;
+         this.email = email;
+         this.company = company;
+
+     }
+     register(adress){
+
+         console.log(this.userName + ' has registerd to this adress '  + adress);
+     }
+ }
+
+ class Manager extends User{
+     constructor(userName,email,company,startus){
+         super(userName,email,company);
+         this.startus = startus;
+     }
+     login(){
+         console.log('The user named '+ this.userName + ' with the email '+ this.email + ' that work in '+ this.company +' has loged in');
+     }
+ }
+ //let user1 = new User('Bertin','bertin@gmail.com','united company');
+// user1.register();
+let nikuze = new Manager('Nikuze','nikuze@gmail.com','united company','manager');
+nikuze.register('112 rutsiro- musanze');
+nikuze.login();
+
+
+</script>
+        
+    </script>
+</body>
+</html>
