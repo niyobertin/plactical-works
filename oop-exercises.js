@@ -27,7 +27,7 @@ class Animal {
        return this.happiness;
 
     };
-    startus(){
+    status(){
         if(this.tiredness > 50){
             console.log(`The ${this.name}  is strong now`);
         }else{
@@ -61,7 +61,7 @@ class Animal {
     cat.gaming();
     cat.takingFood();
     cat.living();
-    cat.startus();
+    cat.status();
 
 
 
@@ -98,7 +98,7 @@ class Shape {
   Create an instance of the Square class called square with appropriate property values, 
   and call its calcPerimeter() and calcArea() methods to show that it works ok.*/
    class Squares extends Shape{
-       constructor(name, sides, sideLength){
+       constructor( name='squre', sides =4, sideLength){
            super(name, sides, sideLength);
        }
        calcArea(){
@@ -108,16 +108,11 @@ class Shape {
        }
    };
 
-   let triange = new Shape('triangle',3,4);
-   let square = new Squares('square',4,3);
+   
+   let square = new Squares(undefined,undefined,3);
    square.calcArea();
    square.calcPerimeter();
    triange.calcPerimeter();
  
   
 
-
-
-    
-
-   
