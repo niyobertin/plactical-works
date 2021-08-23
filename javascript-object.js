@@ -141,7 +141,25 @@ if (this.hours >= 24)
   }
 };
 var clock = new my_Clock();
-  clock.run();
+  //12clock.run();
+
+//9. Write a JavaScript program to calculate the area and perimeter of a circle.
+//Note : Create two methods to calculate the area and perimeter. The radius of the circle will be supplied by the user.
+
+class Circle {
+    constructor(radi){
+        this.radi = radi;
+    }
+    calcurationArea(){
+        return Math.PI * this.radi * this.radi;
+    };
+    calcurationPerimeter(){
+        return 2 * Math.PI  * this.radi;
+    }
+}
+let myCircle = new Circle(prompt('please enter the radius'));
+myCircle.calcurationArea();
+myCircle.calcurationPerimeter();
 
 
 
