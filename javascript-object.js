@@ -161,6 +161,39 @@ let myCircle = new Circle(prompt('please enter the radius'));
 myCircle.calcurationArea();
 myCircle.calcurationPerimeter();
 
+//10. Write a JavaScript program to sort an array of JavaScript objects.
+
+let person =[{
+  name: 'kagabo',
+  gender:'Male',
+  age:12
+},
+{
+  name: 'Irene',
+  gender:'Male',
+  age:15
+},
+{name: 'Yolanda',
+gender:'Female',
+age:20}];
+
+
+function myArray(){
+  console.log(person.reverse());
+};
+
+myArray();
+
+//11. Write a JavaScript function to print all the methods in an JavaScript object.
+
+let myObject = Array.prototype;
+
+console.log(Object.getOwnPropertyNames(myObject).filter(function(y){
+  return typeof myObject[y] ==='function'
+}));
+
+
+
 
 
 
